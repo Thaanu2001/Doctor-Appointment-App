@@ -21,5 +21,13 @@ namespace Doctor_Appointment_App
         {
 
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var signinScreen = new signInScreen();
+            signinScreen.Closed += (s, args) => this.Close();
+            signinScreen.Show();
+        }
     }
 }
