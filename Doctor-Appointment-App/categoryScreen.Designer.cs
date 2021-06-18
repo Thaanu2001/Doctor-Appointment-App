@@ -30,6 +30,7 @@ namespace Doctor_Appointment_App
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -38,7 +39,12 @@ namespace Doctor_Appointment_App
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.backImg1 = new System.Windows.Forms.PictureBox();
+            this.cat4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -46,6 +52,11 @@ namespace Doctor_Appointment_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backImg1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cat4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +76,18 @@ namespace Doctor_Appointment_App
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(309, 730);
             this.panel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(73, 655);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 56);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "© MediCare.\r\nAll Rights Reserved";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox6
             // 
@@ -142,25 +165,77 @@ namespace Doctor_Appointment_App
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(73, 655);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 56);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "© eChannel.\r\nAll Rights Reserved";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.label4.Location = new System.Drawing.Point(361, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(172, 48);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Categories";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Doctor_Appointment_App.Properties.Resources.cat_1;
+            this.pictureBox7.Location = new System.Drawing.Point(368, 99);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(395, 133);
+            this.pictureBox7.TabIndex = 5;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Doctor_Appointment_App.Properties.Resources.cat_2;
+            this.pictureBox8.Location = new System.Drawing.Point(792, 99);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(395, 133);
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            // 
+            // backImg1
+            // 
+            this.backImg1.Image = global::Doctor_Appointment_App.Properties.Resources.doctor_clipart_1;
+            this.backImg1.Location = new System.Drawing.Point(450, 430);
+            this.backImg1.Name = "backImg1";
+            this.backImg1.Size = new System.Drawing.Size(666, 287);
+            this.backImg1.TabIndex = 9;
+            this.backImg1.TabStop = false;
+            // 
+            // cat4
+            // 
+            this.cat4.BackColor = System.Drawing.Color.Transparent;
+            this.cat4.Image = global::Doctor_Appointment_App.Properties.Resources.cat_4;
+            this.cat4.Location = new System.Drawing.Point(792, 269);
+            this.cat4.Name = "cat4";
+            this.cat4.Size = new System.Drawing.Size(395, 133);
+            this.cat4.TabIndex = 10;
+            this.cat4.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Doctor_Appointment_App.Properties.Resources.cat_3;
+            this.pictureBox9.Location = new System.Drawing.Point(368, 269);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(395, 133);
+            this.pictureBox9.TabIndex = 11;
+            this.pictureBox9.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(239)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(249)))));
+            this.ClientSize = new System.Drawing.Size(1262, 729);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.cat4);
+            this.Controls.Add(this.backImg1);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Name = "Form1";
             this.Text = "    ";
             this.panel1.ResumeLayout(false);
@@ -171,7 +246,13 @@ namespace Doctor_Appointment_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backImg1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cat4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -187,6 +268,12 @@ namespace Doctor_Appointment_App
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox backImg1;
+        private System.Windows.Forms.PictureBox cat4;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
 

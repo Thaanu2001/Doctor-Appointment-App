@@ -63,6 +63,56 @@ namespace Doctor_Appointment_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cat_1 {
+            get {
+                object obj = ResourceManager.GetObject("cat-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_2 {
+            get {
+                object obj = ResourceManager.GetObject("cat-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_3 {
+            get {
+                object obj = ResourceManager.GetObject("cat-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat_4 {
+            get {
+                object obj = ResourceManager.GetObject("cat-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doctor_clipart_1 {
+            get {
+                object obj = ResourceManager.GetObject("doctor-clipart-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sidebar_button_1 {
             get {
                 object obj = ResourceManager.GetObject("sidebar-button-1", resourceCulture);
@@ -96,6 +146,26 @@ namespace Doctor_Appointment_App.Properties {
         internal static System.Drawing.Bitmap sidebar_button_4 {
             get {
                 object obj = ResourceManager.GetObject("sidebar-button-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signin_button {
+            get {
+                object obj = ResourceManager.GetObject("signin-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signin_img {
+            get {
+                object obj = ResourceManager.GetObject("signin-img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
