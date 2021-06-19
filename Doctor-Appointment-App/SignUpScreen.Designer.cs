@@ -36,13 +36,13 @@ namespace Doctor_Appointment_App
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtFname = new System.Windows.Forms.TextBox();
-            this.txtLname = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.profileImg = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.browseImgBtn = new System.Windows.Forms.PictureBox();
+            this.txtFname = new System.Windows.Forms.TextBox();
+            this.txtLname = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtPass2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.signupBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileImg)).BeginInit();
@@ -56,9 +56,9 @@ namespace Doctor_Appointment_App
             this.errMsg.ForeColor = System.Drawing.Color.Red;
             this.errMsg.Location = new System.Drawing.Point(885, 475);
             this.errMsg.Name = "errMsg";
-            this.errMsg.Size = new System.Drawing.Size(201, 22);
+            this.errMsg.Size = new System.Drawing.Size(161, 22);
             this.errMsg.TabIndex = 16;
-            this.errMsg.Text = "Incorrect username or password";
+            this.errMsg.Text = "Passwords doesn\'t match";
             this.errMsg.Visible = false;
             // 
             // signinBtn
@@ -72,6 +72,7 @@ namespace Doctor_Appointment_App
             this.signinBtn.Size = new System.Drawing.Size(279, 28);
             this.signinBtn.TabIndex = 15;
             this.signinBtn.Text = "Already Have an Account? Sign In";
+            this.signinBtn.Click += new System.EventHandler(this.signinBtn_Click);
             // 
             // signupBtn
             // 
@@ -82,6 +83,7 @@ namespace Doctor_Appointment_App
             this.signupBtn.Size = new System.Drawing.Size(283, 45);
             this.signupBtn.TabIndex = 14;
             this.signupBtn.TabStop = false;
+            this.signupBtn.Click += new System.EventHandler(this.signupBtn_Click);
             // 
             // txtUser
             // 
@@ -113,48 +115,6 @@ namespace Doctor_Appointment_App
             this.pictureBox1.Size = new System.Drawing.Size(790, 761);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtFname
-            // 
-            this.txtFname.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtFname.Location = new System.Drawing.Point(889, 204);
-            this.txtFname.Name = "txtFname";
-            this.txtFname.PlaceholderText = "First Name";
-            this.txtFname.Size = new System.Drawing.Size(283, 31);
-            this.txtFname.TabIndex = 17;
-            this.txtFname.Tag = "";
-            // 
-            // txtLname
-            // 
-            this.txtLname.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtLname.Location = new System.Drawing.Point(889, 253);
-            this.txtLname.Name = "txtLname";
-            this.txtLname.PlaceholderText = "Last Name";
-            this.txtLname.Size = new System.Drawing.Size(283, 31);
-            this.txtLname.TabIndex = 18;
-            this.txtLname.Tag = "";
-            // 
-            // txtPass
-            // 
-            this.txtPass.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPass.Location = new System.Drawing.Point(889, 302);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PlaceholderText = "Password";
-            this.txtPass.Size = new System.Drawing.Size(283, 31);
-            this.txtPass.TabIndex = 13;
-            this.txtPass.Tag = "";
-            this.txtPass.UseSystemPasswordChar = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(889, 352);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Re-Type Password";
-            this.textBox1.Size = new System.Drawing.Size(283, 31);
-            this.textBox1.TabIndex = 19;
-            this.textBox1.Tag = "";
-            this.textBox1.UseSystemPasswordChar = true;
             // 
             // profileImg
             // 
@@ -189,22 +149,64 @@ namespace Doctor_Appointment_App
             this.browseImgBtn.TabStop = false;
             this.browseImgBtn.Click += new System.EventHandler(this.browseImgBtn_Click);
             // 
+            // txtFname
+            // 
+            this.txtFname.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtFname.Location = new System.Drawing.Point(889, 203);
+            this.txtFname.Name = "txtFname";
+            this.txtFname.PlaceholderText = "First Name";
+            this.txtFname.Size = new System.Drawing.Size(283, 31);
+            this.txtFname.TabIndex = 23;
+            this.txtFname.Tag = "";
+            // 
+            // txtLname
+            // 
+            this.txtLname.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLname.Location = new System.Drawing.Point(889, 253);
+            this.txtLname.Name = "txtLname";
+            this.txtLname.PlaceholderText = "Last Name";
+            this.txtLname.Size = new System.Drawing.Size(283, 31);
+            this.txtLname.TabIndex = 24;
+            this.txtLname.Tag = "";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPass.Location = new System.Drawing.Point(889, 303);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PlaceholderText = "Password";
+            this.txtPass.Size = new System.Drawing.Size(283, 31);
+            this.txtPass.TabIndex = 25;
+            this.txtPass.Tag = "";
+            this.txtPass.UseSystemPasswordChar = true;
+            // 
+            // txtPass2
+            // 
+            this.txtPass2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPass2.Location = new System.Drawing.Point(889, 352);
+            this.txtPass2.Name = "txtPass2";
+            this.txtPass2.PlaceholderText = "Re-Type Password";
+            this.txtPass2.Size = new System.Drawing.Size(283, 31);
+            this.txtPass2.TabIndex = 26;
+            this.txtPass2.Tag = "";
+            this.txtPass2.UseSystemPasswordChar = true;
+            // 
             // SignUpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1262, 729);
+            this.Controls.Add(this.txtPass2);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtLname);
+            this.Controls.Add(this.txtFname);
             this.Controls.Add(this.browseImgBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.profileImg);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtLname);
-            this.Controls.Add(this.txtFname);
             this.Controls.Add(this.errMsg);
             this.Controls.Add(this.signinBtn);
             this.Controls.Add(this.signupBtn);
-            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
@@ -230,12 +232,12 @@ namespace Doctor_Appointment_App
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtFname;
-        private System.Windows.Forms.TextBox txtLname;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox profileImg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox browseImgBtn;
+        private System.Windows.Forms.TextBox txtFname;
+        private System.Windows.Forms.TextBox txtLname;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtPass2;
     }
 }
