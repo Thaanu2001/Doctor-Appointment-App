@@ -29,12 +29,13 @@ namespace Doctor_Appointment_App
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signInScreen));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.signinBtn = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.signUpBtn = new System.Windows.Forms.Label();
             this.errMsg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.signinBtn)).BeginInit();
@@ -93,17 +94,18 @@ namespace Doctor_Appointment_App
             this.signinBtn.TabStop = false;
             this.signinBtn.Click += new System.EventHandler(this.signinBtn_Click);
             // 
-            // label1
+            // signUpBtn
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(249)))));
-            this.label1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.label1.Location = new System.Drawing.Point(900, 434);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 28);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Don\'t Have an Account? Sign Up";
+            this.signUpBtn.AutoSize = true;
+            this.signUpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(249)))));
+            this.signUpBtn.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.signUpBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.signUpBtn.Location = new System.Drawing.Point(900, 434);
+            this.signUpBtn.Name = "signUpBtn";
+            this.signUpBtn.Size = new System.Drawing.Size(265, 28);
+            this.signUpBtn.TabIndex = 8;
+            this.signUpBtn.Text = "Don\'t Have an Account? Sign Up";
+            this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
             // 
             // errMsg
             // 
@@ -124,15 +126,17 @@ namespace Doctor_Appointment_App
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1262, 729);
             this.Controls.Add(this.errMsg);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.signUpBtn);
             this.Controls.Add(this.signinBtn);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "signInScreen";
-            this.Text = "t";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MediCare - Online Doctor Channeling System";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.signinBtn)).EndInit();
             this.ResumeLayout(false);
@@ -147,7 +151,7 @@ namespace Doctor_Appointment_App
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.PictureBox signinBtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label signUpBtn;
         private System.Windows.Forms.Label errMsg;
     }
 }

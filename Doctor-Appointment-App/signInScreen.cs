@@ -22,7 +22,6 @@ namespace Doctor_Appointment_App
             string connetionString;
             connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
 
-
             using (SqlConnection myConnection = new SqlConnection(connetionString))
             {
                 string oString = "Select * from userTable where username=@username";
@@ -35,10 +34,11 @@ namespace Doctor_Appointment_App
                     {
                         if (txtPass.Text == oReader["password"].ToString())
                         {
-                            this.Hide();
                             var categoryScreen = new Form1();
-                            categoryScreen.Closed += (s, args) => this.Close();
+                            categoryScreen.setUsername(this.txtUser.Text);
                             categoryScreen.Show();
+                            this.Hide();
+                            categoryScreen.Closed += (s, args) => this.Close();
                         }
                         else {
                             errMsg.Visible = true;
@@ -52,6 +52,14 @@ namespace Doctor_Appointment_App
                     myConnection.Close();
                 }
             }
+        }
+
+        private void signUpBtn_Click(object sender, EventArgs e)
+        {
+            var SignUpScreen = new SignUpScreen();
+            SignUpScreen.Show();
+            this.Hide();
+            SignUpScreen.Closed += (s, args) => this.Close();
         }
     }
 }
