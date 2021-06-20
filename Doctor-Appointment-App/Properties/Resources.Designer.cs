@@ -163,6 +163,16 @@ namespace Doctor_Appointment_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap doctor_card_background {
+            get {
+                object obj = ResourceManager.GetObject("doctor-card-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doctor_clipart_1 {
             get {
                 object obj = ResourceManager.GetObject("doctor-clipart-1", resourceCulture);

@@ -81,6 +81,73 @@ namespace Doctor_Appointment_App
             profileImg.Image = profileImage;
             nameLabel.Text = firstName;
             categoryLabel.Text = getCategory();
+
+            string connetionString;
+            connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
+
+            SqlConnection myConnection = new SqlConnection(connetionString);
+
+            //string oString = "select profileImg,firstName from userTable where username='"+getUsername()+"'";
+            string oString = "select * from doctorTable where category='" + getCategory() + "'";
+            SqlCommand oCmd = new SqlCommand(oString, myConnection);
+
+            SqlDataAdapter dp = new SqlDataAdapter(oCmd);
+
+            DataSet ds = new DataSet("doctors");
+
+            dp.Fill(ds, "doctors");
+            DataRow Row1;
+            DataRow Row2;
+            DataRow Row3;
+            DataRow Row4;
+            Row1 = ds.Tables["doctors"].Rows[0];
+            Row2 = ds.Tables["doctors"].Rows[1];
+            Row3 = ds.Tables["doctors"].Rows[2];
+            Row4 = ds.Tables["doctors"].Rows[3];
+
+            // Doctor card 1
+            drName1.Text = "Dr. " + (String)Row1["name"];
+            drSpecialty1.Text = (String)Row1["category"] + " Specialist";
+            drExp1.Text = (String)Row1["experience"] + " Years";
+            drPatients1.Text = (String)Row1["patients"] + "K";
+
+            byte[] drImage1 = new byte[0];
+            drImage1 = (byte[])Row1["photo"];
+            MemoryStream stream1 = new MemoryStream(drImage1);
+            drPhoto1.Image = Image.FromStream(stream1);
+
+            // Doctor card 2
+            drName2.Text = "Dr. " + (String)Row2["name"];
+            drSpecialty2.Text = (String)Row2["category"] + " Specialist";
+            drExp2.Text = (String)Row2["experience"] + " Years";
+            drPatients2.Text = (String)Row2["patients"] + "K";
+
+            byte[] drImage2 = new byte[0];
+            drImage2 = (byte[])Row2["photo"];
+            MemoryStream stream2 = new MemoryStream(drImage2);
+            drPhoto2.Image = Image.FromStream(stream2);
+
+            // Doctor card 3
+            drName3.Text = "Dr. " + (String)Row3["name"];
+            drSpecialty3.Text = (String)Row3["category"] + " Specialist";
+            drExp3.Text = (String)Row3["experience"] + " Years";
+            drPatients3.Text = (String)Row3["patients"] + "K";
+
+            byte[] drImage3 = new byte[0];
+            drImage3 = (byte[])Row3["photo"];
+            MemoryStream stream3 = new MemoryStream(drImage3);
+            drPhoto3.Image = Image.FromStream(stream3);
+
+            // Doctor card 4
+            drName4.Text = "Dr. " + (String)Row4["name"];
+            drSpecialty4.Text = (String)Row4["category"] + " Specialist";
+            drExp4.Text = (String)Row4["experience"] + " Years";
+            drPatients4.Text = (String)Row4["patients"] + "K";
+
+            byte[] drImage4 = new byte[0];
+            drImage4 = (byte[])Row4["photo"];
+            MemoryStream stream4 = new MemoryStream(drImage4);
+            drPhoto4.Image = Image.FromStream(stream4);
         }
 
         private void btnCate_Click(object sender, EventArgs e)
@@ -105,6 +172,11 @@ namespace Doctor_Appointment_App
             var categoryScreen = new Form1();
             categoryScreen.Closed += (s, args) => this.Close();
             categoryScreen.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
