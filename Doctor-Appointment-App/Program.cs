@@ -17,7 +17,7 @@ namespace Doctor_Appointment_App
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new signInScreen());
+            Application.Run(new Form1());
         }
     }
 }
