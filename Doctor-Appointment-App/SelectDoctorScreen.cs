@@ -71,6 +71,38 @@ namespace Doctor_Appointment_App
         {
             btnSignOut.Image = Doctor_Appointment_App.Properties.Resources.sidebar_button_4;
         }
+        private void drButton1_MouseEnter(object sender, EventArgs e)
+        {
+            drButton1.Image = Doctor_Appointment_App.Properties.Resources.book_appointment_btn_hover;
+        }
+        private void drButton1_MouseLeave(object sender, EventArgs e)
+        {
+            drButton1.Image = Doctor_Appointment_App.Properties.Resources.book_appointment_btn;
+        }
+        private void drButton2_MouseEnter(object sender, EventArgs e)
+        {
+            drButton2.Image = Doctor_Appointment_App.Properties.Resources.book_appointment_btn_hover;
+        }
+        private void drButton2_MouseLeave(object sender, EventArgs e)
+        {
+            drButton2.Image = Doctor_Appointment_App.Properties.Resources.book_appointment_btn;
+        }
+        private void drButton3_MouseEnter(object sender, EventArgs e)
+        {
+            drButton3.Image = Doctor_Appointment_App.Properties.Resources.book_appointment_btn_hover;
+        }
+        private void drButton3_MouseLeave(object sender, EventArgs e)
+        {
+            drButton3.Image = Doctor_Appointment_App.Properties.Resources.book_appointment_btn;
+        }
+        private void drButton4_MouseEnter(object sender, EventArgs e)
+        {
+            drButton4.Image = Doctor_Appointment_App.Properties.Resources.book_appointment_btn_hover;
+        }
+        private void drButton4_MouseLeave(object sender, EventArgs e)
+        {
+            drButton4.Image = Doctor_Appointment_App.Properties.Resources.book_appointment_btn;
+        }
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
@@ -174,9 +206,48 @@ namespace Doctor_Appointment_App
             categoryScreen.Show();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void drButton1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            var BookAppointmentScreen = new BookAppointmentScreen();
+            BookAppointmentScreen.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            BookAppointmentScreen.setDoctorData(this.drName1.Text, this.drSpecialty1.Text);
+            BookAppointmentScreen.setCategory(getCategory());
+            BookAppointmentScreen.Closed += (s, args) => this.Close();
+            BookAppointmentScreen.Show();
+        }
 
+        private void drButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var BookAppointmentScreen = new BookAppointmentScreen();
+            BookAppointmentScreen.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            BookAppointmentScreen.setDoctorData(this.drName2.Text, this.drSpecialty2.Text);
+            BookAppointmentScreen.setCategory(getCategory());
+            BookAppointmentScreen.Closed += (s, args) => this.Close();
+            BookAppointmentScreen.Show();
+        }
+
+        private void drButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var BookAppointmentScreen = new BookAppointmentScreen();
+            BookAppointmentScreen.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            BookAppointmentScreen.setDoctorData(this.drName3.Text, this.drSpecialty3.Text);
+            BookAppointmentScreen.setCategory(getCategory());
+            BookAppointmentScreen.Closed += (s, args) => this.Close();
+            BookAppointmentScreen.Show();
+        }
+
+        private void drButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var BookAppointmentScreen = new BookAppointmentScreen();
+            BookAppointmentScreen.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            BookAppointmentScreen.setDoctorData(this.drName4.Text, this.drSpecialty4.Text);
+            BookAppointmentScreen.setCategory(getCategory());
+            BookAppointmentScreen.Closed += (s, args) => this.Close();
+            BookAppointmentScreen.Show();
         }
     }
 }

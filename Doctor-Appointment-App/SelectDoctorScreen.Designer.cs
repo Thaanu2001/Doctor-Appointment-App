@@ -42,15 +42,8 @@ namespace Doctor_Appointment_App
             this.profileImg = new System.Windows.Forms.PictureBox();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.drExp1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.drSpecialty1 = new System.Windows.Forms.Label();
-            this.drName1 = new System.Windows.Forms.Label();
-            this.drPhoto1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.drPatients1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.drButton2 = new System.Windows.Forms.PictureBox();
             this.drSpecialty2 = new System.Windows.Forms.Label();
             this.drName2 = new System.Windows.Forms.Label();
             this.drPhoto2 = new System.Windows.Forms.PictureBox();
@@ -59,6 +52,7 @@ namespace Doctor_Appointment_App
             this.label9 = new System.Windows.Forms.Label();
             this.drExp2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.drButton3 = new System.Windows.Forms.PictureBox();
             this.drSpecialty3 = new System.Windows.Forms.Label();
             this.drName3 = new System.Windows.Forms.Label();
             this.drPhoto3 = new System.Windows.Forms.PictureBox();
@@ -67,6 +61,7 @@ namespace Doctor_Appointment_App
             this.label15 = new System.Windows.Forms.Label();
             this.drExp3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.drButton4 = new System.Windows.Forms.PictureBox();
             this.drSpecialty4 = new System.Windows.Forms.Label();
             this.drName4 = new System.Windows.Forms.Label();
             this.drPhoto4 = new System.Windows.Forms.PictureBox();
@@ -74,6 +69,15 @@ namespace Doctor_Appointment_App
             this.drPatients4 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.drExp4 = new System.Windows.Forms.Label();
+            this.drExp1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.drPatients1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.drPhoto1 = new System.Windows.Forms.PictureBox();
+            this.drName1 = new System.Windows.Forms.Label();
+            this.drSpecialty1 = new System.Windows.Forms.Label();
+            this.drPanel1 = new System.Windows.Forms.Panel();
+            this.drButton1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAbout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSignOut)).BeginInit();
@@ -82,14 +86,18 @@ namespace Doctor_Appointment_App
             ((System.ComponentModel.ISupportInitialize)(this.btnCate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.drPhoto1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drPhoto2)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drPhoto3)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drPhoto4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drPhoto1)).BeginInit();
+            this.drPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -234,110 +242,10 @@ namespace Doctor_Appointment_App
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // drExp1
-            // 
-            this.drExp1.AutoSize = true;
-            this.drExp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
-            this.drExp1.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.drExp1.ForeColor = System.Drawing.Color.White;
-            this.drExp1.Location = new System.Drawing.Point(18, 113);
-            this.drExp1.Margin = new System.Windows.Forms.Padding(0);
-            this.drExp1.Name = "drExp1";
-            this.drExp1.Size = new System.Drawing.Size(101, 37);
-            this.drExp1.TabIndex = 3;
-            this.drExp1.Text = "0 Years";
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::Doctor_Appointment_App.Properties.Resources.doctor_card_background;
-            this.panel2.Controls.Add(this.drSpecialty1);
-            this.panel2.Controls.Add(this.drName1);
-            this.panel2.Controls.Add(this.drPhoto1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.drPatients1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.drExp1);
-            this.panel2.Location = new System.Drawing.Point(368, 110);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(393, 244);
-            this.panel2.TabIndex = 10;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // drSpecialty1
-            // 
-            this.drSpecialty1.AutoSize = true;
-            this.drSpecialty1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
-            this.drSpecialty1.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.drSpecialty1.ForeColor = System.Drawing.Color.White;
-            this.drSpecialty1.Location = new System.Drawing.Point(20, 47);
-            this.drSpecialty1.Name = "drSpecialty1";
-            this.drSpecialty1.Size = new System.Drawing.Size(143, 28);
-            this.drSpecialty1.TabIndex = 9;
-            this.drSpecialty1.Text = "Doctor Specialty";
-            // 
-            // drName1
-            // 
-            this.drName1.AutoSize = true;
-            this.drName1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
-            this.drName1.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.drName1.ForeColor = System.Drawing.Color.White;
-            this.drName1.Location = new System.Drawing.Point(18, 18);
-            this.drName1.Name = "drName1";
-            this.drName1.Size = new System.Drawing.Size(167, 37);
-            this.drName1.TabIndex = 8;
-            this.drName1.Text = "Doctor Name";
-            // 
-            // drPhoto1
-            // 
-            this.drPhoto1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.drPhoto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
-            this.drPhoto1.Location = new System.Drawing.Point(190, 11);
-            this.drPhoto1.Name = "drPhoto1";
-            this.drPhoto1.Size = new System.Drawing.Size(190, 233);
-            this.drPhoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.drPhoto1.TabIndex = 7;
-            this.drPhoto1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
-            this.label5.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 167);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 28);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Patients";
-            // 
-            // drPatients1
-            // 
-            this.drPatients1.AutoSize = true;
-            this.drPatients1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
-            this.drPatients1.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.drPatients1.ForeColor = System.Drawing.Color.White;
-            this.drPatients1.Location = new System.Drawing.Point(19, 188);
-            this.drPatients1.Margin = new System.Windows.Forms.Padding(0);
-            this.drPatients1.Name = "drPatients1";
-            this.drPatients1.Size = new System.Drawing.Size(79, 37);
-            this.drPatients1.TabIndex = 5;
-            this.drPatients1.Text = "0.00K";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
-            this.label2.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Experience";
-            // 
             // panel3
             // 
             this.panel3.BackgroundImage = global::Doctor_Appointment_App.Properties.Resources.doctor_card_background;
+            this.panel3.Controls.Add(this.drButton2);
             this.panel3.Controls.Add(this.drSpecialty2);
             this.panel3.Controls.Add(this.drName2);
             this.panel3.Controls.Add(this.drPhoto2);
@@ -349,6 +257,20 @@ namespace Doctor_Appointment_App
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(393, 244);
             this.panel3.TabIndex = 11;
+            // 
+            // drButton2
+            // 
+            this.drButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.drButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.drButton2.Image = global::Doctor_Appointment_App.Properties.Resources.book_appointment_btn;
+            this.drButton2.Location = new System.Drawing.Point(194, 206);
+            this.drButton2.Name = "drButton2";
+            this.drButton2.Size = new System.Drawing.Size(186, 27);
+            this.drButton2.TabIndex = 14;
+            this.drButton2.TabStop = false;
+            this.drButton2.Click += new System.EventHandler(this.drButton2_Click);
+            this.drButton2.MouseEnter += new System.EventHandler(this.drButton2_MouseEnter);
+            this.drButton2.MouseLeave += new System.EventHandler(this.drButton2_MouseLeave);
             // 
             // drSpecialty2
             // 
@@ -438,6 +360,7 @@ namespace Doctor_Appointment_App
             // panel4
             // 
             this.panel4.BackgroundImage = global::Doctor_Appointment_App.Properties.Resources.doctor_card_background;
+            this.panel4.Controls.Add(this.drButton3);
             this.panel4.Controls.Add(this.drSpecialty3);
             this.panel4.Controls.Add(this.drName3);
             this.panel4.Controls.Add(this.drPhoto3);
@@ -449,6 +372,20 @@ namespace Doctor_Appointment_App
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(393, 244);
             this.panel4.TabIndex = 12;
+            // 
+            // drButton3
+            // 
+            this.drButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.drButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.drButton3.Image = global::Doctor_Appointment_App.Properties.Resources.book_appointment_btn;
+            this.drButton3.Location = new System.Drawing.Point(194, 206);
+            this.drButton3.Name = "drButton3";
+            this.drButton3.Size = new System.Drawing.Size(186, 27);
+            this.drButton3.TabIndex = 14;
+            this.drButton3.TabStop = false;
+            this.drButton3.Click += new System.EventHandler(this.drButton3_Click);
+            this.drButton3.MouseEnter += new System.EventHandler(this.drButton3_MouseEnter);
+            this.drButton3.MouseLeave += new System.EventHandler(this.drButton3_MouseLeave);
             // 
             // drSpecialty3
             // 
@@ -538,6 +475,7 @@ namespace Doctor_Appointment_App
             // panel5
             // 
             this.panel5.BackgroundImage = global::Doctor_Appointment_App.Properties.Resources.doctor_card_background;
+            this.panel5.Controls.Add(this.drButton4);
             this.panel5.Controls.Add(this.drSpecialty4);
             this.panel5.Controls.Add(this.drName4);
             this.panel5.Controls.Add(this.drPhoto4);
@@ -549,6 +487,20 @@ namespace Doctor_Appointment_App
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(393, 244);
             this.panel5.TabIndex = 12;
+            // 
+            // drButton4
+            // 
+            this.drButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.drButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.drButton4.Image = global::Doctor_Appointment_App.Properties.Resources.book_appointment_btn;
+            this.drButton4.Location = new System.Drawing.Point(194, 206);
+            this.drButton4.Name = "drButton4";
+            this.drButton4.Size = new System.Drawing.Size(186, 27);
+            this.drButton4.TabIndex = 15;
+            this.drButton4.TabStop = false;
+            this.drButton4.Click += new System.EventHandler(this.drButton4_Click);
+            this.drButton4.MouseEnter += new System.EventHandler(this.drButton4_MouseEnter);
+            this.drButton4.MouseLeave += new System.EventHandler(this.drButton4_MouseLeave);
             // 
             // drSpecialty4
             // 
@@ -635,6 +587,121 @@ namespace Doctor_Appointment_App
             this.drExp4.TabIndex = 3;
             this.drExp4.Text = "0 Years";
             // 
+            // drExp1
+            // 
+            this.drExp1.AutoSize = true;
+            this.drExp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.drExp1.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.drExp1.ForeColor = System.Drawing.Color.White;
+            this.drExp1.Location = new System.Drawing.Point(18, 113);
+            this.drExp1.Margin = new System.Windows.Forms.Padding(0);
+            this.drExp1.Name = "drExp1";
+            this.drExp1.Size = new System.Drawing.Size(101, 37);
+            this.drExp1.TabIndex = 3;
+            this.drExp1.Text = "0 Years";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.label2.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(20, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 28);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Experience";
+            // 
+            // drPatients1
+            // 
+            this.drPatients1.AutoSize = true;
+            this.drPatients1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.drPatients1.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.drPatients1.ForeColor = System.Drawing.Color.White;
+            this.drPatients1.Location = new System.Drawing.Point(19, 188);
+            this.drPatients1.Margin = new System.Windows.Forms.Padding(0);
+            this.drPatients1.Name = "drPatients1";
+            this.drPatients1.Size = new System.Drawing.Size(79, 37);
+            this.drPatients1.TabIndex = 5;
+            this.drPatients1.Text = "0.00K";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.label5.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(21, 167);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 28);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Patients";
+            // 
+            // drPhoto1
+            // 
+            this.drPhoto1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.drPhoto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.drPhoto1.Location = new System.Drawing.Point(190, 11);
+            this.drPhoto1.Name = "drPhoto1";
+            this.drPhoto1.Size = new System.Drawing.Size(190, 233);
+            this.drPhoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.drPhoto1.TabIndex = 7;
+            this.drPhoto1.TabStop = false;
+            // 
+            // drName1
+            // 
+            this.drName1.AutoSize = true;
+            this.drName1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.drName1.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.drName1.ForeColor = System.Drawing.Color.White;
+            this.drName1.Location = new System.Drawing.Point(18, 18);
+            this.drName1.Name = "drName1";
+            this.drName1.Size = new System.Drawing.Size(167, 37);
+            this.drName1.TabIndex = 8;
+            this.drName1.Text = "Doctor Name";
+            // 
+            // drSpecialty1
+            // 
+            this.drSpecialty1.AutoSize = true;
+            this.drSpecialty1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.drSpecialty1.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.drSpecialty1.ForeColor = System.Drawing.Color.White;
+            this.drSpecialty1.Location = new System.Drawing.Point(20, 47);
+            this.drSpecialty1.Name = "drSpecialty1";
+            this.drSpecialty1.Size = new System.Drawing.Size(143, 28);
+            this.drSpecialty1.TabIndex = 9;
+            this.drSpecialty1.Text = "Doctor Specialty";
+            // 
+            // drPanel1
+            // 
+            this.drPanel1.BackgroundImage = global::Doctor_Appointment_App.Properties.Resources.doctor_card_background;
+            this.drPanel1.Controls.Add(this.drButton1);
+            this.drPanel1.Controls.Add(this.drSpecialty1);
+            this.drPanel1.Controls.Add(this.drName1);
+            this.drPanel1.Controls.Add(this.drPhoto1);
+            this.drPanel1.Controls.Add(this.label5);
+            this.drPanel1.Controls.Add(this.drPatients1);
+            this.drPanel1.Controls.Add(this.label2);
+            this.drPanel1.Controls.Add(this.drExp1);
+            this.drPanel1.Location = new System.Drawing.Point(368, 110);
+            this.drPanel1.Name = "drPanel1";
+            this.drPanel1.Size = new System.Drawing.Size(393, 244);
+            this.drPanel1.TabIndex = 10;
+            // 
+            // drButton1
+            // 
+            this.drButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(111)))), ((int)(((byte)(239)))));
+            this.drButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.drButton1.Image = global::Doctor_Appointment_App.Properties.Resources.book_appointment_btn;
+            this.drButton1.Location = new System.Drawing.Point(194, 206);
+            this.drButton1.Name = "drButton1";
+            this.drButton1.Size = new System.Drawing.Size(186, 27);
+            this.drButton1.TabIndex = 13;
+            this.drButton1.TabStop = false;
+            this.drButton1.Click += new System.EventHandler(this.drButton1_Click);
+            this.drButton1.MouseEnter += new System.EventHandler(this.drButton1_MouseEnter);
+            this.drButton1.MouseLeave += new System.EventHandler(this.drButton1_MouseLeave);
+            // 
             // SelectDoctorScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -644,14 +711,14 @@ namespace Doctor_Appointment_App
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.drPanel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.categoryLabel);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SelectDoctorScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " MediCare - Online Doctor Channeling System";
             this.Load += new System.EventHandler(this.SelectDoctorScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -662,18 +729,22 @@ namespace Doctor_Appointment_App
             ((System.ComponentModel.ISupportInitialize)(this.btnCate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.drPhoto1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drPhoto2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drPhoto3)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drPhoto4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drPhoto1)).EndInit();
+            this.drPanel1.ResumeLayout(false);
+            this.drPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -691,16 +762,8 @@ namespace Doctor_Appointment_App
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox profileImg;
-        private System.Windows.Forms.Label drExp1;
         private System.Windows.Forms.Label categoryLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label drPatients1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox drPhoto1;
-        private System.Windows.Forms.Label drSpecialty1;
-        private System.Windows.Forms.Label drName1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label drSpecialty2;
         private System.Windows.Forms.Label drName2;
@@ -725,5 +788,19 @@ namespace Doctor_Appointment_App
         private System.Windows.Forms.Label drPatients4;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label drExp4;
+        private System.Windows.Forms.Label drExp1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label drPatients1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox drPhoto1;
+        private System.Windows.Forms.Label drName1;
+        private System.Windows.Forms.Label drSpecialty1;
+        private System.Windows.Forms.Panel drPanel1;
+        private System.Windows.Forms.PictureBox Pi;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox drButton1;
+        private System.Windows.Forms.PictureBox drButton2;
+        private System.Windows.Forms.PictureBox drButton3;
+        private System.Windows.Forms.PictureBox drButton4;
     }
 }
