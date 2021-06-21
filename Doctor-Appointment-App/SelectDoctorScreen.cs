@@ -249,5 +249,14 @@ namespace Doctor_Appointment_App
             BookAppointmentScreen.Closed += (s, args) => this.Close();
             BookAppointmentScreen.Show();
         }
+
+        private void btnChannels_Click(object sender, EventArgs e)
+        {
+            var AppointmentsScreen = new AppointmentsScreen();
+            AppointmentsScreen.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            AppointmentsScreen.Show();
+            this.Hide();
+            AppointmentsScreen.Closed += (s, args) => this.Close();
+        }
     }
 }

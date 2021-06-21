@@ -139,6 +139,7 @@ namespace Doctor_Appointment_App
             this.btnChannels.Size = new System.Drawing.Size(297, 106);
             this.btnChannels.TabIndex = 5;
             this.btnChannels.TabStop = false;
+            this.btnChannels.Click += new System.EventHandler(this.btnChannels_Click);
             this.btnChannels.MouseEnter += new System.EventHandler(this.btnChannels_MouseEnter);
             this.btnChannels.MouseLeave += new System.EventHandler(this.btnChannels_MouseLeave);
             // 
@@ -261,7 +262,7 @@ namespace Doctor_Appointment_App
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(221, 36);
             this.txtDate.TabIndex = 13;
-            this.txtDate.Value = new System.DateTime(2021, 6, 21, 20, 44, 23, 0);
+            this.txtDate.Value = new System.DateTime(2021, 6, 22, 0, 0, 0, 0);
             // 
             // txtTime
             // 

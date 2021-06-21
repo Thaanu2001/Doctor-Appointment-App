@@ -17,10 +17,13 @@ namespace Doctor_Appointment_App
         private String category;
         private String drFullName;
         private String drSpecialty;
+        private bool throughAppointmentsScreen = false;
+        private int appointmentId;
 
         public BookAppointmentScreen()
         {
             InitializeComponent();
+            this.ActiveControl = drName;
         }
         public void setUserData(String usrName, String fName, Image profileImg)
         {
@@ -33,15 +36,18 @@ namespace Doctor_Appointment_App
             this.drFullName = Name;
             this.drSpecialty = Specialty;
         }
-
-        public String getCategory()
+        public void setThroughAppointmentsScreen(bool through, int id)
         {
-            return category;
+            this.throughAppointmentsScreen = through;
+            this.appointmentId = id;
         }
-
         public void setCategory(String cate)
         {
             this.category = cate;
+        }
+        public String getCategory()
+        {
+            return category;
         }
 
         private void btnCate_MouseEnter(object sender, EventArgs e)
@@ -91,6 +97,32 @@ namespace Doctor_Appointment_App
             nameLabel.Text = firstName;
             drName.Text = drFullName;
             drSpeciality.Text = drSpecialty;
+
+            if (throughAppointmentsScreen)
+            {
+                string connetionString;
+                connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
+
+                using (SqlConnection myConnection = new SqlConnection(connetionString))
+                {
+                    string oString = "Select * from appointmentTable where Id=@Id";
+                    SqlCommand oCmd = new SqlCommand(oString, myConnection);
+                    oCmd.Parameters.AddWithValue("@Id", this.appointmentId);
+                    myConnection.Open();
+                    using (SqlDataReader oReader = oCmd.ExecuteReader())
+                    {
+                        while (oReader.Read())
+                        {
+                            this.txtPatientName.Text = oReader["patientName"].ToString();
+                            this.txtDate.Value = DateTime.ParseExact(oReader["date"].ToString(), "dd-MM-yyyy", null);
+                            this.txtTime.Value = DateTime.ParseExact(oReader["time"].ToString(), "HH:mm", null);
+                            this.txtNote.Text = oReader["notes"].ToString();
+                        }
+
+                        myConnection.Close();
+                    }
+                }
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -128,7 +160,7 @@ namespace Doctor_Appointment_App
                 connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
                 SqlConnection cnn = new SqlConnection(connetionString);
 
-                sql = "Insert into appointmentTable (username, doctorName, doctorSpecialty, patientName, date, time, notes) values ('" + this.username + "','" + this.drFullName + "','" + this.drSpecialty + "','" + this.txtPatientName.Text + "','" + this.txtDate.Text + "','" + this.txtTime.Text + "','" + this.txtNote.Text + "')";
+                sql = "Insert into appointmentTable (username, doctorName, doctorSpecialty, patientName, date, time, notes) values ('" + this.username + "','" + this.drFullName + "','" + this.drSpecialty + "','" + this.txtPatientName.Text + "','" + this.txtDate.Text.Replace(" ","") + "','" + this.txtTime.Text.Replace(" ","") + "','" + this.txtNote.Text + "')";
                 SqlCommand com = new SqlCommand(sql, cnn);
 
                 cnn.Open();
@@ -146,6 +178,15 @@ namespace Doctor_Appointment_App
             {
                 errMsg.Visible = true;
             }
+        }
+
+        private void btnChannels_Click(object sender, EventArgs e)
+        {
+            var AppointmentsScreen = new AppointmentsScreen();
+            AppointmentsScreen.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            AppointmentsScreen.Show();
+            this.Hide();
+            AppointmentsScreen.Closed += (s, args) => this.Close();
         }
     }
 }
