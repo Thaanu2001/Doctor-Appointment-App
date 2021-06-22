@@ -256,6 +256,7 @@ namespace Doctor_Appointment_App
             this.btnCancel1.Size = new System.Drawing.Size(158, 41);
             this.btnCancel1.TabIndex = 17;
             this.btnCancel1.TabStop = false;
+            this.btnCancel1.Click += new System.EventHandler(this.btnCancel1_Click);
             this.btnCancel1.MouseEnter += new System.EventHandler(this.btnCancel1_MouseEnter);
             this.btnCancel1.MouseLeave += new System.EventHandler(this.btnCancel1_MouseLeave);
             // 
@@ -381,6 +382,7 @@ namespace Doctor_Appointment_App
             this.btnCancel2.Size = new System.Drawing.Size(158, 41);
             this.btnCancel2.TabIndex = 17;
             this.btnCancel2.TabStop = false;
+            this.btnCancel2.Click += new System.EventHandler(this.btnCancel2_Click);
             this.btnCancel2.MouseEnter += new System.EventHandler(this.btnCancel2_MouseEnter);
             this.btnCancel2.MouseLeave += new System.EventHandler(this.btnCancel2_MouseLeave);
             // 
@@ -497,6 +499,7 @@ namespace Doctor_Appointment_App
             this.btnCancel3.Size = new System.Drawing.Size(158, 41);
             this.btnCancel3.TabIndex = 17;
             this.btnCancel3.TabStop = false;
+            this.btnCancel3.Click += new System.EventHandler(this.btnCancel3_Click);
             this.btnCancel3.MouseEnter += new System.EventHandler(this.btnCancel3_MouseEnter);
             this.btnCancel3.MouseLeave += new System.EventHandler(this.btnCancel3_MouseLeave);
             // 
@@ -613,6 +616,7 @@ namespace Doctor_Appointment_App
             this.btnCancel4.Size = new System.Drawing.Size(158, 41);
             this.btnCancel4.TabIndex = 17;
             this.btnCancel4.TabStop = false;
+            this.btnCancel4.Click += new System.EventHandler(this.btnCancel4_Click);
             this.btnCancel4.MouseEnter += new System.EventHandler(this.btnCancel4_MouseEnter);
             this.btnCancel4.MouseLeave += new System.EventHandler(this.btnCancel4_MouseLeave);
             // 

@@ -154,25 +154,49 @@ namespace Doctor_Appointment_App
         private void btnBook_Click(object sender, EventArgs e)
         {
             if (txtPatientName.Text != "") {
-                string connetionString;
-                string sql;
+                if (!throughAppointmentsScreen) {
+                    string connetionString;
+                    string sql;
 
-                connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
-                SqlConnection cnn = new SqlConnection(connetionString);
+                    connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
+                    SqlConnection cnn = new SqlConnection(connetionString);
 
-                sql = "Insert into appointmentTable (username, doctorName, doctorSpecialty, patientName, date, time, notes) values ('" + this.username + "','" + this.drFullName + "','" + this.drSpecialty + "','" + this.txtPatientName.Text + "','" + this.txtDate.Text.Replace(" ","") + "','" + this.txtTime.Text.Replace(" ","") + "','" + this.txtNote.Text + "')";
-                SqlCommand com = new SqlCommand(sql, cnn);
+                    sql = "Insert into appointmentTable (username, doctorName, doctorSpecialty, patientName, date, time, notes) values ('" + this.username + "','" + this.drFullName + "','" + this.drSpecialty + "','" + this.txtPatientName.Text + "','" + this.txtDate.Text.Replace(" ", "") + "','" + this.txtTime.Text.Replace(" ", "") + "','" + this.txtNote.Text + "')";
+                    SqlCommand com = new SqlCommand(sql, cnn);
 
-                cnn.Open();
-                com.ExecuteNonQuery();
+                    cnn.Open();
+                    com.ExecuteNonQuery();
 
 
-                this.Hide();
-                var categoryScreen = new Form1();
-                categoryScreen.Closed += (s, args) => this.Close();
-                categoryScreen.Show();
-                var AppointmentPlacedPopup = new AppointmentPlacedPopup();
-                AppointmentPlacedPopup.Show();
+                    this.Hide();
+                    var categoryScreen = new Form1();
+                    categoryScreen.Closed += (s, args) => this.Close();
+                    categoryScreen.Show();
+                    var AppointmentPlacedPopup = new AppointmentPlacedPopup();
+                    AppointmentPlacedPopup.Show();
+                }
+                else
+                {
+                    string connetionString;
+                    string sql;
+
+                    connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
+                    SqlConnection cnn = new SqlConnection(connetionString);
+
+                    sql = "Update appointmentTable set patientName='"+ this.txtPatientName.Text +"', date='"+ this.txtDate.Text.Replace(" ","") + "', time='" + this.txtTime.Text.Replace(" ","") + "', notes='" + this.txtNote.Text + "' where Id='"+ this.appointmentId +"'";
+                    SqlCommand com = new SqlCommand(sql, cnn);
+
+                    cnn.Open();
+                    com.ExecuteNonQuery();
+
+
+                    this.Hide();
+                    var categoryScreen = new Form1();
+                    categoryScreen.Closed += (s, args) => this.Close();
+                    categoryScreen.Show();
+                    var AppointmentPlacedPopup = new AppointmentPlacedPopup();
+                    AppointmentPlacedPopup.Show();
+                }
             }
             else
             {

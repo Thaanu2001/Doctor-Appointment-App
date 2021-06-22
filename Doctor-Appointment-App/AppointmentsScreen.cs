@@ -32,6 +32,88 @@ namespace Doctor_Appointment_App
             this.profileImage = profileImg;
         }
 
+        public void ChangeState()
+        {
+            profileImg.Image = profileImage;
+            nameLabel.Text = firstName;
+
+            string connetionString;
+            connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
+
+            SqlConnection myConnection = new SqlConnection(connetionString);
+
+            //string oString = "select profileImg,firstName from userTable where username='"+getUsername()+"'";
+            string oString = "select * from appointmentTable where username='" + "Thaanu" + "'";
+            SqlCommand oCmd = new SqlCommand(oString, myConnection);
+
+            SqlDataAdapter dp = new SqlDataAdapter(oCmd);
+
+            DataSet ds = new DataSet("appointments");
+
+
+            dp.Fill(ds, "appointments");
+
+            int rowCount = ds.Tables["appointments"].Rows.Count;
+
+            DataRow Row1;
+            DataRow Row2;
+            DataRow Row3;
+            DataRow Row4;
+
+            if (rowCount >= 1)
+            {
+                // Appointment card 1
+                appoinmentPanel1.Visible = true;
+                Row1 = ds.Tables["appointments"].Rows[0];
+
+                drName1.Text = (String)Row1["doctorName"];
+                drSpecialty1.Text = (String)Row1["doctorSpecialty"];
+                date1.Text = (String)Row1["date"];
+                time1.Text = (String)Row1["time"];
+                id1 = (int)Row1["Id"];
+            }
+
+            if (rowCount >= 2)
+            {
+                // Appointment card 1
+                appoinmentPanel2.Visible = true;
+                Row2 = ds.Tables["appointments"].Rows[1];
+
+                drName2.Text = (String)Row2["doctorName"];
+                drSpecialty2.Text = (String)Row2["doctorSpecialty"];
+                date2.Text = (String)Row2["date"];
+                time2.Text = (String)Row2["time"];
+                id2 = (int)Row2["Id"];
+            }
+
+            if (rowCount >= 3)
+            {
+                // Appointment card 3
+                backImg1.Visible = false;
+                appoinmentPanel3.Visible = true;
+                Row3 = ds.Tables["appointments"].Rows[2];
+
+                drName3.Text = (String)Row3["doctorName"];
+                drSpecialty3.Text = (String)Row3["doctorSpecialty"];
+                date3.Text = (String)Row3["date"];
+                time3.Text = (String)Row3["time"];
+                id3 = (int)Row3["Id"];
+            }
+
+            if (rowCount >= 4)
+            {
+                // Appointment card 4
+                appoinmentPanel4.Visible = true;
+                Row4 = ds.Tables["appointments"].Rows[3];
+
+                drName4.Text = (String)Row4["doctorName"];
+                drSpecialty4.Text = (String)Row4["doctorSpecialty"];
+                date4.Text = (String)Row4["date"];
+                time4.Text = (String)Row4["time"];
+                id4 = (int)Row4["Id"];
+            }
+        }
+
         private void btnCate_MouseEnter(object sender, EventArgs e)
         {
             btnCate.Image = Doctor_Appointment_App.Properties.Resources.sidebar_button_1_hover;
@@ -264,6 +346,38 @@ namespace Doctor_Appointment_App
             BookAppointmentScreen.setThroughAppointmentsScreen(true, id4);
             BookAppointmentScreen.Closed += (s, args) => this.Close();
             BookAppointmentScreen.Show();
+        }
+
+        private void btnCancel1_Click(object sender, EventArgs e)
+        {
+            var CancelAppointmentPopup = new CancelAppointmentPopup();
+            CancelAppointmentPopup.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            CancelAppointmentPopup.setAppointmentsId(id1);
+            CancelAppointmentPopup.Show();
+        }
+
+        private void btnCancel2_Click(object sender, EventArgs e)
+        {
+            var CancelAppointmentPopup = new CancelAppointmentPopup();
+            CancelAppointmentPopup.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            CancelAppointmentPopup.setAppointmentsId(id2);
+            CancelAppointmentPopup.Show();
+        }
+
+        private void btnCancel3_Click(object sender, EventArgs e)
+        {
+            var CancelAppointmentPopup = new CancelAppointmentPopup();
+            CancelAppointmentPopup.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            CancelAppointmentPopup.setAppointmentsId(id3);
+            CancelAppointmentPopup.Show();
+        }
+
+        private void btnCancel4_Click(object sender, EventArgs e)
+        {
+            var CancelAppointmentPopup = new CancelAppointmentPopup();
+            CancelAppointmentPopup.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            CancelAppointmentPopup.setAppointmentsId(id4);
+            CancelAppointmentPopup.Show();
         }
     }
 }
