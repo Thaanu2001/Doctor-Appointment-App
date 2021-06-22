@@ -175,5 +175,14 @@ namespace Doctor_Appointment_App
             this.Hide();
             AppointmentsScreen.Closed += (s, args) => this.Close();
         }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            var AboutScreen = new AboutScreen();
+            AboutScreen.setUserData(this.getUsername(), this.nameLabel.Text, this.profileImg.Image);
+            AboutScreen.Show();
+            this.Hide();
+            AboutScreen.Closed += (s, args) => this.Close();
+        }
     }
 }

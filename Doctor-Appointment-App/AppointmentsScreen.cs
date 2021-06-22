@@ -214,7 +214,7 @@ namespace Doctor_Appointment_App
             SqlConnection myConnection = new SqlConnection(connetionString);
 
             //string oString = "select profileImg,firstName from userTable where username='"+getUsername()+"'";
-            string oString = "select * from appointmentTable where username='" + "Thaanu" + "'";
+            string oString = "select * from appointmentTable where username='" + username + "'";
             SqlCommand oCmd = new SqlCommand(oString, myConnection);
 
             SqlDataAdapter dp = new SqlDataAdapter(oCmd);
@@ -288,6 +288,7 @@ namespace Doctor_Appointment_App
         {
             this.Hide();
             var categoryScreen = new Form1();
+            categoryScreen.setUsername(username);
             categoryScreen.Closed += (s, args) => this.Close();
             categoryScreen.Show();
         }
@@ -378,6 +379,15 @@ namespace Doctor_Appointment_App
             CancelAppointmentPopup.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
             CancelAppointmentPopup.setAppointmentsId(id4);
             CancelAppointmentPopup.Show();
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            var AboutScreen = new AboutScreen();
+            AboutScreen.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            AboutScreen.Show();
+            this.Hide();
+            AboutScreen.Closed += (s, args) => this.Close();
         }
     }
 }

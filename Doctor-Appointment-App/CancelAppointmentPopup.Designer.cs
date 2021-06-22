@@ -59,7 +59,7 @@ namespace Doctor_Appointment_App
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(249)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Image = global::Doctor_Appointment_App.Properties.Resources.appointment_cancel_btn;
             this.btnCancel.Location = new System.Drawing.Point(107, 102);

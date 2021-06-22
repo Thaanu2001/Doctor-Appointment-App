@@ -121,9 +121,6 @@
   <data name="cat-1-hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\cat-1-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doctor-clipart-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\doctor-clipart-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Image Crop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\Image Crop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,14 +199,20 @@
   <data name="appointment-cancel-btn-hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\appointment-cancel-btn-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="doctor-card-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\doctor-card-background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="back-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\back-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cat-4-hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\cat-4-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doctor-card-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\doctor-card-background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="doctor-clipart-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\doctor-clipart-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="book-appointment-btn-hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\book-appointment-btn-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,7 +238,7 @@
   <data name="appointment-edit-btn-hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\appointment-edit-btn-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="About" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\About.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

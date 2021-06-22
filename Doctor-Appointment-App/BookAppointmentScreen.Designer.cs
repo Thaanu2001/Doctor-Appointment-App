@@ -105,6 +105,7 @@ namespace Doctor_Appointment_App
             this.btnAbout.Size = new System.Drawing.Size(297, 104);
             this.btnAbout.TabIndex = 8;
             this.btnAbout.TabStop = false;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             this.btnAbout.MouseEnter += new System.EventHandler(this.btnAbout_MouseEnter);
             this.btnAbout.MouseLeave += new System.EventHandler(this.btnAbout_MouseLeave);
             // 

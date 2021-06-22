@@ -186,6 +186,7 @@ namespace Doctor_Appointment_App
         {
             this.Hide();
             var categoryScreen = new Form1();
+            categoryScreen.setUsername(username);
             categoryScreen.Closed += (s, args) => this.Close();
             categoryScreen.Show();
         }
@@ -202,6 +203,7 @@ namespace Doctor_Appointment_App
         {
             this.Hide();
             var categoryScreen = new Form1();
+            categoryScreen.setUsername(username);
             categoryScreen.Closed += (s, args) => this.Close();
             categoryScreen.Show();
         }
@@ -257,6 +259,15 @@ namespace Doctor_Appointment_App
             AppointmentsScreen.Show();
             this.Hide();
             AppointmentsScreen.Closed += (s, args) => this.Close();
+        }
+
+        private void btnAbout_Click_1(object sender, EventArgs e)
+        {
+            var AboutScreen = new AboutScreen();
+            AboutScreen.setUserData(this.username, this.nameLabel.Text, this.profileImg.Image);
+            AboutScreen.Show();
+            this.Hide();
+            AboutScreen.Closed += (s, args) => this.Close();
         }
     }
 }
