@@ -19,10 +19,7 @@ namespace Doctor_Appointment_App
 
         private void signinBtn_Click(object sender, EventArgs e)
         {
-            string connetionString;
-            connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
-
-            using (SqlConnection myConnection = new SqlConnection(connetionString))
+            using (SqlConnection myConnection = new SqlConnection(Global.getConnectionString()))
             {
                 string oString = "Select * from userTable where username=@username";
                 SqlCommand oCmd = new SqlCommand(oString, myConnection);

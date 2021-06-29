@@ -114,10 +114,7 @@ namespace Doctor_Appointment_App
             nameLabel.Text = firstName;
             categoryLabel.Text = getCategory();
 
-            string connetionString;
-            connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
-
-            SqlConnection myConnection = new SqlConnection(connetionString);
+            SqlConnection myConnection = new SqlConnection(Global.getConnectionString());
 
             //string oString = "select profileImg,firstName from userTable where username='"+getUsername()+"'";
             string oString = "select * from doctorTable where category='" + getCategory() + "'";

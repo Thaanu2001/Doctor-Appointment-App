@@ -100,10 +100,7 @@ namespace Doctor_Appointment_App
 
             if (throughAppointmentsScreen)
             {
-                string connetionString;
-                connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
-
-                using (SqlConnection myConnection = new SqlConnection(connetionString))
+                using (SqlConnection myConnection = new SqlConnection(Global.getConnectionString()))
                 {
                     string oString = "Select * from appointmentTable where Id=@Id";
                     SqlCommand oCmd = new SqlCommand(oString, myConnection);
@@ -156,11 +153,9 @@ namespace Doctor_Appointment_App
         {
             if (txtPatientName.Text != "") {
                 if (!throughAppointmentsScreen) {
-                    string connetionString;
                     string sql;
 
-                    connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
-                    SqlConnection cnn = new SqlConnection(connetionString);
+                    SqlConnection cnn = new SqlConnection(Global.getConnectionString());
 
                     sql = "Insert into appointmentTable (username, doctorName, doctorSpecialty, patientName, date, time, notes) values ('" + this.username + "','" + this.drFullName + "','" + this.drSpecialty + "','" + this.txtPatientName.Text + "','" + this.txtDate.Text.Replace(" ", "") + "','" + this.txtTime.Text.Replace(" ", "") + "','" + this.txtNote.Text + "')";
                     SqlCommand com = new SqlCommand(sql, cnn);
@@ -179,11 +174,9 @@ namespace Doctor_Appointment_App
                 }
                 else
                 {
-                    string connetionString;
                     string sql;
 
-                    connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
-                    SqlConnection cnn = new SqlConnection(connetionString);
+                    SqlConnection cnn = new SqlConnection(Global.getConnectionString());
 
                     sql = "Update appointmentTable set patientName='"+ this.txtPatientName.Text +"', date='"+ this.txtDate.Text.Replace(" ","") + "', time='" + this.txtTime.Text.Replace(" ","") + "', notes='" + this.txtNote.Text + "' where Id='"+ this.appointmentId +"'";
                     SqlCommand com = new SqlCommand(sql, cnn);

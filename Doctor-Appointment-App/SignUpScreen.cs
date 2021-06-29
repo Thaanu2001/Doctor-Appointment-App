@@ -47,12 +47,10 @@ namespace Doctor_Appointment_App
         {
             // Register user
             if (txtPass.Text == txtPass2.Text && txtUser.Text != "" && txtPass.Text != "") {
-                string connetionString;
                 string sql;
                 int queryStatus = 0;
 
-                connetionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\GitHub\Repositories\Doctor-Appointment-App\Doctor-Appointment-App\MediCareDB.mdf;Integrated Security=True;Connect Timeout=30";
-                SqlConnection cnn = new SqlConnection(connetionString);
+                SqlConnection cnn = new SqlConnection(Global.getConnectionString());
 
                 sql = "Insert into userTable (username, password, firstName, lastName, profileImg) values ('" + this.txtUser.Text + "','" + this.txtPass.Text + "','" + this.txtFname.Text + "','" + this.txtLname.Text + "',@profilePic)";
                 SqlCommand com = new SqlCommand(sql, cnn);
